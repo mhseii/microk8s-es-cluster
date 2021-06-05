@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2020-06-26T02:06:44Z"
+  name: es-config
+  namespace: default
+data:
+  ES_JAVA_OPTS: -Xms512m -Xmx512m
+  elasticsearch.yml: "cluster.name: microk8s-elastic-cluster\ncluster.initial_master_nodes:
+    esnode-0\ndiscovery.seed_hosts: es-transport\nnetwork.host: \"0.0.0.0\"\nbootstrap.memory_lock:
+    false    \nxpack.security.enabled: false\n"  
