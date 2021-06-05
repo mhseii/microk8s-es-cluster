@@ -6,9 +6,6 @@ metadata:
     app: elasticsearch
   name: es-http
   namespace: default
-  resourceVersion: "24350"
-  selfLink: /api/v1/namespaces/default/services/es-http
-  uid: 9a546e7a-bd18-4eff-a670-dfbaa24486e4
 spec:
   ports:
   - name: http
