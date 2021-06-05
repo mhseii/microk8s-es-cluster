@@ -6,6 +6,10 @@ metadata:
   namespace: default
 data:
   ES_JAVA_OPTS: -Xms512m -Xmx512m
-  elasticsearch.yml: "cluster.name: microk8s-elastic-cluster\ncluster.initial_master_nodes:
-    esnode-0\ndiscovery.seed_hosts: es-transport\nnetwork.host: \"0.0.0.0\"\nbootstrap.memory_lock:
-    false    \nxpack.security.enabled: false\n"  
+  elasticsearch.yml: |-
+    cluster.name: microk8s-elastic-cluster
+    cluster.initial_master_nodes: esnode-0
+    discovery.seed_hosts: es-transport
+    network.host: "0.0.0.0"
+    bootstrap.memory_lock: false
+    xpack.security.enabled: false 
