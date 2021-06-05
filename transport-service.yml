@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-06-26T02:06:51Z"
+  labels:
+    app: elasticsearch
+  name: es-transport
+  namespace: default
+spec:
+  ports:
+  - name: transport
+    port: 9300
+    protocol: TCP
+    targetPort: 9300
+  selector:
+    app: elasticsearch
+  sessionAffinity: None
+  type: ClusterIP
